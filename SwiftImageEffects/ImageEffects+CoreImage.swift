@@ -6,6 +6,7 @@
 //
 //
 
+import UIKit
 import CoreImage
 
 #if swift(>=4.0)

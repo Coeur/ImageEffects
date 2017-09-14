@@ -1,5 +1,5 @@
 //
-//  ImageEffects+UIKit.swift
+//  ImageEffects+UIVisualEffect.swift
 //  Pods
 //
 //  Created by Antoine Cœur on 07/08/2017.

@@ -1,6 +1,6 @@
 # SwiftImageEffects
 
-[![CI Status](http://img.shields.io/travis/coeur/SwiftImageEffects.svg?style=flat)](https://travis-ci.org/coeur/SwiftImageEffects)
+[![CI Status](http://img.shields.io/travis/coeur/ImageEffects.svg?style=flat)](https://travis-ci.org/coeur/ImageEffects)
 [![Version](https://img.shields.io/cocoapods/v/SwiftImageEffects.svg?style=flat)](http://cocoapods.org/pods/SwiftImageEffects)
 [![License](https://img.shields.io/cocoapods/l/SwiftImageEffects.svg?style=flat)](http://cocoapods.org/pods/SwiftImageEffects)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftImageEffects.svg?style=flat)](http://cocoapods.org/pods/SwiftImageEffects)
@@ -25,7 +25,7 @@ pod 'SwiftImageEffects'
 
 ## More
 
-If you need more image effects, we recommand [GPUImage 2](https://github.com/BradLarson/GPUImage2).
+If you need more image effects, we recommend [GPUImage 2](https://github.com/BradLarson/GPUImage2).
 
 ## Author
 

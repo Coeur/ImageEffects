@@ -15,7 +15,7 @@
  Copyright (C) 2014 Apple Inc. All Rights Reserved.
  */
 
-import Foundation
+import UIKit
 import Accelerate
 
 extension UIImage {

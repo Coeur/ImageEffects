@@ -11,7 +11,7 @@ import UIKit
 extension UIView {
     /// Get a UIImage from the UIView
     open func renderImage() -> UIImage {
-        if #available(iOS 10.0, *) {
+        if #available(iOS 10.0, tvOS 10.0, *) {
             // iOS 10+: UIGraphicsImageRenderer
             return UIGraphicsImageRenderer(size: bounds.size).image { layer.render(in: $0.cgContext) }
         } else {

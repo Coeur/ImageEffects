@@ -7,7 +7,7 @@ target 'SwiftImageEffects_Example' do
   pod 'SwiftImageEffects', :path => '../'
 
   # experimental
-  pod 'SwiftImageEffects/UIKit', :path => '../'
+  pod 'SwiftImageEffects/UIVisualEffect', :path => '../'
 
   # samples
   pod 'SwiftImageEffectsSamples', :git => 'https://github.com/Coeur/ImageEffectsSamples'

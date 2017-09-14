@@ -6,13 +6,13 @@ PODS:
   - SwiftImageEffects/Accelerate (0.1.0)
   - SwiftImageEffects/CoreImage (0.1.0)
   - SwiftImageEffects/extensions (0.1.0)
-  - SwiftImageEffects/UIKit (0.1.0)
+  - SwiftImageEffects/UIVisualEffect (0.1.0)
   - SwiftImageEffectsSamples (0.1.0)
   - SwiftLint (0.22.0)
 
 DEPENDENCIES:
   - SwiftImageEffects (from `../`)
-  - SwiftImageEffects/UIKit (from `../`)
+  - SwiftImageEffects/UIVisualEffect (from `../`)
   - SwiftImageEffectsSamples (from `https://github.com/Coeur/ImageEffectsSamples`)
   - SwiftLint (~> 0)
 
@@ -28,10 +28,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/Coeur/ImageEffectsSamples
 
 SPEC CHECKSUMS:
-  SwiftImageEffects: 7cf64fc30ed12435e06cb2e16e4a43808ec905c8
+  SwiftImageEffects: f01f757ef843c2f63b0c392265ff800675b7d885
   SwiftImageEffectsSamples: 71d298165a19a56da5ef4c98d51d2a7a0ae07224
   SwiftLint: 1134786caedd2caab0560d2f36b76414a5a56808
 
-PODFILE CHECKSUM: 7b1841b6929879660128fe1a4cdb8ae644d29d60
+PODFILE CHECKSUM: dd409649e73414766496c038e48f8aab5a8a76e6
 
 COCOAPODS: 1.3.1

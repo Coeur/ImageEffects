@@ -20,26 +20,31 @@ SwiftImageEffects is a Swift implementation of https://developer.apple.com/libra
 
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
-  s.osx.deployment_target = '10.6'
-  s.watchos.deployment_target = '2.0'
 
-  # ImageEffects+UIKit.swift has no real use for now, so we ignore it
+  # ImageEffects+UIVisualEffect.swift has no real use for now, so we ignore it
   s.default_subspecs = 'extensions', 'Accelerate', 'CoreImage'
 
   s.subspec 'extensions' do |ss|
     ss.source_files = 'SwiftImageEffects/ImageEffects+extensions.swift'
     ss.frameworks = 'UIKit'
   end
+  
   s.subspec 'Accelerate' do |ss|
     ss.source_files = 'SwiftImageEffects/ImageEffects+Accelerate.swift'
-    ss.frameworks = 'Accelerate'
+    ss.frameworks = 'Accelerate', 'UIKit'
+    ss.ios.deployment_target = '8.0'
+    ss.tvos.deployment_target = '9.0'
+    #ss.watchos.deployment_target = '4.0'
   end
+  
   s.subspec 'CoreImage' do |ss|
     ss.source_files = 'SwiftImageEffects/ImageEffects+CoreImage.swift'
-    ss.frameworks = 'CoreImage'
+    ss.frameworks = 'CoreImage', 'UIKit'
   end
-  s.subspec 'UIKit' do |ss|
-    ss.source_files = 'SwiftImageEffects/ImageEffects+UIKit.swift'
+  
+  # experimental
+  s.subspec 'UIVisualEffect' do |ss|
+    ss.source_files = 'SwiftImageEffects/ImageEffects+UIVisualEffect.swift'
     ss.frameworks = 'UIKit'
   end
 end
