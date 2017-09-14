@@ -1,11 +1,21 @@
 use_frameworks!
 
 target 'SwiftImageEffects_Example' do
+  platform :ios, '8.1'
+
+  # core
   pod 'SwiftImageEffects', :path => '../'
+
+  # experimental
+  pod 'SwiftImageEffects/UIKit', :path => '../'
+
+  # samples
+  pod 'SwiftImageEffectsSamples', :git => 'https://github.com/Coeur/ImageEffectsSamples'
+
+  # best practices
+  pod 'SwiftLint', '~> 0'
 
   target 'SwiftImageEffects_Tests' do
     inherit! :search_paths
-
-    
   end
 end

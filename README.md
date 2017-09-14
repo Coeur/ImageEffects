@@ -5,6 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/SwiftImageEffects.svg?style=flat)](http://cocoapods.org/pods/SwiftImageEffects)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftImageEffects.svg?style=flat)](http://cocoapods.org/pods/SwiftImageEffects)
 
+This class contains methods to apply blur and tint effects to an image.
+SwiftImageEffects is a Swift implementation of [UIImageEffects](https://developer.apple.com/library/content/samplecode/UIImageEffects/).
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -20,9 +23,13 @@ it, simply add the following line to your Podfile:
 pod 'SwiftImageEffects'
 ```
 
+## More
+
+If you need more image effects, we recommand [GPUImage 2](https://github.com/BradLarson/GPUImage2).
+
 ## Author
 
-coeur, coeur@gmx.fr
+Cœur, coeur@gmx.fr
 
 ## License
 
