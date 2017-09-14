@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SwiftImageEffects_Example' do
+  pod 'SwiftImageEffects', :path => '../'
+
+  target 'SwiftImageEffects_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
