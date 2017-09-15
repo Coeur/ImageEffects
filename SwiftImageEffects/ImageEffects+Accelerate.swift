@@ -71,7 +71,7 @@ extension UIImage {
     /// - Parameter maskImage:
     ///         If specified, inputImage is only modified in the area(s) defined by this mask.
     ///         This must be an image mask or it must meet the requirements of the mask parameter of CGContextClipToMask.
-    public func appliedBlur(withRadius blurRadius: CGFloat, tintColor: UIColor?, saturationDeltaFactor: CGFloat, maskImage: UIImage? = nil) -> UIImage? {
+    public func appliedBlur(withRadius blurRadius: CGFloat, tintColor: UIColor? = nil, saturationDeltaFactor: CGFloat = 1.0, maskImage: UIImage? = nil) -> UIImage? {
         // Check pre-conditions.
         if size.width < 1 || size.height < 1 {
             NSLog("*** error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", size.width, size.height, self)
