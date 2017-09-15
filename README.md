@@ -1,6 +1,6 @@
 # SwiftImageEffects
 
-[![CI Status](http://img.shields.io/travis/coeur/ImageEffects.svg?style=flat)](https://travis-ci.org/coeur/ImageEffects)
+[![CI Status](http://img.shields.io/travis/Coeur/ImageEffects.svg?style=flat)](https://travis-ci.org/Coeur/ImageEffects)
 [![Version](https://img.shields.io/cocoapods/v/SwiftImageEffects.svg?style=flat)](http://cocoapods.org/pods/SwiftImageEffects)
 [![License](https://img.shields.io/cocoapods/l/SwiftImageEffects.svg?style=flat)](http://cocoapods.org/pods/SwiftImageEffects)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftImageEffects.svg?style=flat)](http://cocoapods.org/pods/SwiftImageEffects)
