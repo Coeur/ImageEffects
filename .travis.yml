@@ -5,7 +5,7 @@
 matrix:
   include:
     - osx_image: xcode9
-      env: DESTINATION="iPhone 7 Plus (11.0)" SWIFT_VERSION="4.0"
+      env: DESTINATION="iPhone X (11.0)" SWIFT_VERSION="4.0"
       
     - osx_image: xcode9
       env: DESTINATION="iPhone 7 Plus (10.3.1)" SWIFT_VERSION="3.2"
