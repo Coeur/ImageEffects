@@ -37,7 +37,7 @@ extension UIImage {
         return appliedBlur(withRadius: 40, tintColor: tintColor, saturationDeltaFactor: 1.8, maskImage: nil)
     }
     
-    public func appliedTintEffectWithColor(tintColor: UIColor, toImage inputImage: UIImage) -> UIImage? {
+    public func appliedTintEffectWithColor(tintColor: UIColor) -> UIImage? {
         let effectColorAlpha: CGFloat = 0.6
         var effectColor = tintColor
         if tintColor.cgColor.numberOfComponents == 2 {
