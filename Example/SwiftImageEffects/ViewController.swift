@@ -28,20 +28,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        originImageView.image = sampleImage
+        if let image = sampleImage {
+            loadImage(image)
+        }
+    }
+    
+    func loadImage(_ image: UIImage) {
+        originImageView.image = image
         let originImage = originImageView.renderImage()
         effectImageView.image = originImage.gaussianBlurWithCoreImage()
         effect2ImageView.image = originImage.appliedBlur(withRadius: 10, tintColor: nil, saturationDeltaFactor: 1, maskImage: nil)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     @IBAction func selectImage(_ sender: Any) {
+        presentImagePickerActionSheet()
     }
     
     @IBAction func sliderChanged(_ sender: Any) {
+        // TODO: sliderChanged
         /*
          let red = redSlider.value
          let green = greenSlider.value
@@ -52,4 +56,14 @@ class ViewController: UIViewController {
          */
     }
     
+}
+
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            loadImage(image)
+        }
+    }
 }

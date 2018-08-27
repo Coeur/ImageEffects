@@ -35,5 +35,9 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Let&apos;s you choose a different photo.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Let&apos;s you take a different photo.</string>
 </dict>
 </plist>
