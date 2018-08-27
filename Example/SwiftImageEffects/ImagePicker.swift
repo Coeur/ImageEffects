@@ -10,6 +10,22 @@ import UIKit
 import AVFoundation
 import Photos
 
+#if swift(>=4.0)
+#else
+// swift 3 compatibility
+extension AVMediaType {
+    static let video: AVMediaType = AVMediaTypeVideo as AVMediaType
+}
+extension AVCaptureDevice {
+    class func authorizationStatus(for mediaType: AVMediaType) -> AVAuthorizationStatus {
+        return authorizationStatus(forMediaType: mediaType as String?)
+    }
+    class func requestAccess(for mediaType: AVMediaType, completionHandler handler: @escaping (Bool) -> Void) {
+        requestAccess(forMediaType: mediaType as String?, completionHandler: handler)
+    }
+}
+#endif
+
 extension UIImagePickerControllerDelegate where Self : UIViewController, Self : UINavigationControllerDelegate {
     /// Prompt the source choice for image picker
     func presentImagePickerActionSheet() {
@@ -35,14 +51,14 @@ extension UIImagePickerControllerDelegate where Self : UIViewController, Self : 
     /// Prompt the image picker
     private func pickImage(sourceType: UIImagePickerControllerSourceType) {
         if sourceType == .camera {
-            let authorizationStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+            let authorizationStatus = AVCaptureDevice.authorizationStatus(for: .video)
             if authorizationStatus == .denied {
                 // Prompt the user about permissions
                 showImagePickerPermissionErrorAlert(sourceType: sourceType)
                 return
             } else if authorizationStatus == .notDetermined {
                 // Prompt the user about permissions before opening camera
-                AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { [weak self] success in
+                AVCaptureDevice.requestAccess(for: .video) { [weak self] success in
                     if success {
                         self?.pickImage(sourceType: sourceType)
                     }
