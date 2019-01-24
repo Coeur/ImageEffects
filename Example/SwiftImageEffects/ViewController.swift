@@ -9,6 +9,14 @@
 import UIKit
 import SwiftImageEffects
 
+#if swift(>=4.2)
+#else
+// Swift 4.0 compatibility
+extension String {
+    static let editedImage = UIImagePickerControllerEditedImage
+}
+#endif
+
 let samplesBundlePath = Bundle.main.path(forResource: "SwiftImageEffectsSamples", ofType: "bundle")!
 
 class ViewController: UIViewController {
@@ -55,15 +63,25 @@ class ViewController: UIViewController {
          let radius = radiusSlider.value
          */
     }
-    
 }
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    #if swift(>=4.2)
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
+    {
         picker.dismiss(animated: true, completion: nil)
-        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+        if let image = info[.editedImage] as? UIImage {
             loadImage(image)
         }
     }
+    #else
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+    {
+        picker.dismiss(animated: true, completion: nil)
+        if let image = info[.editedImage] as? UIImage {
+            loadImage(image)
+        }
+    }
+    #endif
 }

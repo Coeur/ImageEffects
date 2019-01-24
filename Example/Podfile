@@ -13,7 +13,8 @@ target 'SwiftImageEffects_Example' do
   pod 'SwiftImageEffectsSamples', :git => 'https://github.com/Coeur/ImageEffectsSamples'
 
   # best practices
-  pod 'SwiftLint', '~> 0'
+  # (SwiftLint 0.28.2 needs Swift 4.2)
+  pod 'SwiftLint', '~> 0.28.1.0'
 
   target 'SwiftImageEffects_Tests' do
     inherit! :search_paths

@@ -1,9 +1,9 @@
 # SwiftImageEffects
 
 [![CI Status](http://img.shields.io/travis/Coeur/ImageEffects.svg?style=flat)](https://travis-ci.org/Coeur/ImageEffects)
-[![Version](https://img.shields.io/cocoapods/v/SwiftImageEffects.svg?style=flat)](http://cocoapods.org/pods/SwiftImageEffects)
-[![License](https://img.shields.io/cocoapods/l/SwiftImageEffects.svg?style=flat)](http://cocoapods.org/pods/SwiftImageEffects)
-[![Platform](https://img.shields.io/cocoapods/p/SwiftImageEffects.svg?style=flat)](http://cocoapods.org/pods/SwiftImageEffects)
+[![Version](https://img.shields.io/cocoapods/v/SwiftImageEffects.svg?style=flat)](https://cocoapods.org/pods/SwiftImageEffects)
+[![License](https://img.shields.io/cocoapods/l/SwiftImageEffects.svg?style=flat)](https://cocoapods.org/pods/SwiftImageEffects)
+[![Platform](https://img.shields.io/cocoapods/p/SwiftImageEffects.svg?style=flat)](https://cocoapods.org/pods/SwiftImageEffects)
 
 This class contains methods to apply blur and tint effects to an image.
 SwiftImageEffects is a Swift implementation of [UIImageEffects](https://developer.apple.com/library/content/samplecode/UIImageEffects/).
@@ -16,7 +16,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-SwiftImageEffects is available through [CocoaPods](http://cocoapods.org). To install
+SwiftImageEffects is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby

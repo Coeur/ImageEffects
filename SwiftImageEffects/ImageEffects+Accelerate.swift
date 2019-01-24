@@ -87,7 +87,7 @@ extension UIImage {
         }
         
         let hasBlur = blurRadius > .ulpOfOne
-        let hasSaturationChange = fabs(saturationDeltaFactor - 1.0) > .ulpOfOne
+        let hasSaturationChange = abs(saturationDeltaFactor - 1.0) > .ulpOfOne
         
         let inputImageScale = scale
         let inputImageAlphaInfo = CGImageAlphaInfo(rawValue: inputCGImage.bitmapInfo.rawValue & CGBitmapInfo.alphaInfoMask.rawValue)

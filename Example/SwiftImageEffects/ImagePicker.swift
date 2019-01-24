@@ -12,7 +12,7 @@ import Photos
 
 #if swift(>=4.0)
 #else
-// swift 3 compatibility
+// Swift 3 compatibility
 extension AVMediaType {
     static let video: AVMediaType = AVMediaTypeVideo as AVMediaType
 }
@@ -23,6 +23,16 @@ extension AVCaptureDevice {
     class func requestAccess(for mediaType: AVMediaType, completionHandler handler: @escaping (Bool) -> Void) {
         requestAccess(forMediaType: mediaType as String?, completionHandler: handler)
     }
+}
+#endif
+#if swift(>=4.2)
+#else
+// Swift 4.0 compatibility
+extension UIImagePickerController {
+    typealias SourceType = UIImagePickerControllerSourceType
+}
+extension UIApplication {
+    static let openSettingsURLString = UIApplicationOpenSettingsURLString
 }
 #endif
 
@@ -49,7 +59,7 @@ extension UIImagePickerControllerDelegate where Self : UIViewController, Self : 
     }
     
     /// Prompt the image picker
-    private func pickImage(sourceType: UIImagePickerControllerSourceType) {
+    private func pickImage(sourceType: UIImagePickerController.SourceType) {
         if sourceType == .camera {
             let authorizationStatus = AVCaptureDevice.authorizationStatus(for: .video)
             if authorizationStatus == .denied {
@@ -96,7 +106,7 @@ extension UIImagePickerControllerDelegate where Self : UIViewController, Self : 
     }
     
     /// Prompt the user about permissions
-    private func showImagePickerPermissionErrorAlert(sourceType: UIImagePickerControllerSourceType) {
+    private func showImagePickerPermissionErrorAlert(sourceType: UIImagePickerController.SourceType) {
         let title: String
         if sourceType == .camera {
             title = "You didn't grant camera permission."
@@ -107,7 +117,7 @@ extension UIImagePickerControllerDelegate where Self : UIViewController, Self : 
         
         // User has explicitly denied authorization for this application.
         let settingsAction = UIAlertAction(title: "Settings", style: .default) { _ in
-            UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
+            UIApplication.shared.openURL(URL(string: UIApplication.openSettingsURLString)!)
         }
         alert.addAction(settingsAction)
         
