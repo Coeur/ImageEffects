@@ -24,9 +24,9 @@ extension CIImage {
 // Swift 4.0 compatibility
 extension CIFilter {
     /** Creates a new filter of type 'name'.
-    The filter's input parameters are set from the dictionary of key-value pairs.
-    On OSX, any of the filter input parameters not specified in the dictionary will be undefined.
-    On iOS, any of the filter input parameters not specified in the dictionary will be set to default values. */
+     The filter's input parameters are set from the dictionary of key-value pairs.
+     On OSX, any of the filter input parameters not specified in the dictionary will be undefined.
+     On iOS, any of the filter input parameters not specified in the dictionary will be set to default values. */
     convenience init?(name: String, parameters params: [String: Any]?) {
         self.init(name: name, withInputParameters: params)
     }
