@@ -5,7 +5,7 @@
 matrix:
   include:
     - osx_image: xcode10.1
-      env: DESTINATION="iPhone XS Max (12.1)" SWIFT_VERSION="4.2"
+      env: DESTINATION="iPad Pro (11-inch) (12.1)" SWIFT_VERSION="4.2"
       
     - osx_image: xcode10
       env: DESTINATION="iPhone XS (12.0)" SWIFT_VERSION="4.2"
@@ -14,16 +14,16 @@ matrix:
       env: DESTINATION="iPhone X (11.4)" SWIFT_VERSION="4.0"
       
     - osx_image: xcode9.3
-      env: DESTINATION="iPhone 8 (11.0)" SWIFT_VERSION="4.0"
+      env: DESTINATION="iPhone 8 (11.0.1)" SWIFT_VERSION="4.0"
       
     - osx_image: xcode9.2
-      env: DESTINATION="iPhone 7 Plus (10.3.1)" SWIFT_VERSION="3.2"
+      env: DESTINATION="iPhone 7 Plus (10.3.1)" SWIFT_VERSION="4.0"
       
     - osx_image: xcode9.1
-      env: DESTINATION="iPhone 6s Plus (9.3)" SWIFT_VERSION="3.1"
+      env: DESTINATION="iPhone 6s Plus (9.3)" SWIFT_VERSION="4.0"
       
     - osx_image: xcode9
-      env: DESTINATION="iPhone 6 Plus (8.4)" SWIFT_VERSION="3.0"
+      env: DESTINATION="iPhone 6 Plus (8.4)" SWIFT_VERSION="4.0"
 
 language: objective-c
 cache: cocoapods
