@@ -12,7 +12,7 @@ import SwiftImageEffects
 #if swift(>=4.2)
 #else
 // Swift 4.0 compatibility
-extension String {
+fileprivate extension String {
     static let editedImage = UIImagePickerControllerEditedImage
 }
 #endif

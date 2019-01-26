@@ -8,6 +8,17 @@
 
 import UIKit
 
+#if swift(>=4.0)
+#else
+// Swift 3 compatibility
+fileprivate extension CIImage {
+    /* Return a new image cropped to a rectangle. */
+    func cropped(to rect: CGRect) -> CIImage {
+        return cropping(to: rect)
+    }
+}
+#endif
+
 extension UIView {
     /// Get a UIImage from the UIView
     /// - parameter opaque:

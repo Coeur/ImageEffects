@@ -16,7 +16,7 @@ import Photos
 extension UIImagePickerController {
     typealias SourceType = UIImagePickerControllerSourceType
 }
-extension UIApplication {
+fileprivate extension UIApplication {
     static let openSettingsURLString = UIApplicationOpenSettingsURLString
 }
 #endif

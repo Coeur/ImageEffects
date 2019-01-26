@@ -12,7 +12,7 @@ import CoreImage
 #if swift(>=4.0)
 #else
 // Swift 3 compatibility
-extension CIImage {
+fileprivate extension CIImage {
     /* Return a new image cropped to a rectangle. */
     func cropped(to rect: CGRect) -> CIImage {
         return cropping(to: rect)
@@ -22,7 +22,7 @@ extension CIImage {
 #if swift(>=4.2)
 #else
 // Swift 4.0 compatibility
-extension CIFilter {
+fileprivate extension CIFilter {
     /** Creates a new filter of type 'name'.
      The filter's input parameters are set from the dictionary of key-value pairs.
      On OSX, any of the filter input parameters not specified in the dictionary will be undefined.
