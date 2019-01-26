@@ -3,6 +3,7 @@
 
 included:
 - ../SwiftImageEffects
+- .
 
 excluded:
 - Carthage
@@ -32,7 +33,6 @@ opt_in_rules:
   - redundant_nil_coalescing
   - fatal_error_message
   - nimble_operator
-  - no_extension_access_modifier
 #style:
   - operator_usage_whitespace
   - number_separator

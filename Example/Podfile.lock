@@ -8,13 +8,13 @@ PODS:
   - SwiftImageEffects/extensions (0.1.0)
   - SwiftImageEffects/UIVisualEffect (0.1.0)
   - SwiftImageEffectsSamples (0.1.0)
-  - SwiftLint (0.28.1)
+  - SwiftLint (0.30.1)
 
 DEPENDENCIES:
   - SwiftImageEffects (from `../`)
   - SwiftImageEffects/UIVisualEffect (from `../`)
   - SwiftImageEffectsSamples (from `https://github.com/Coeur/ImageEffectsSamples`)
-  - SwiftLint (~> 0.28.1.0)
+  - SwiftLint (~> 0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -34,8 +34,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   SwiftImageEffects: 85c8b22c18b933953352ea6aeb1477c83580b7b5
   SwiftImageEffectsSamples: 71d298165a19a56da5ef4c98d51d2a7a0ae07224
-  SwiftLint: 7f5f7de0da74a649b16616cb5246ae323489656e
+  SwiftLint: a54bf1fe12b55c68560eb2a7689dfc81458508f7
 
-PODFILE CHECKSUM: d11b195c071e3767af25bf21af36990a88ca35b9
+PODFILE CHECKSUM: dd409649e73414766496c038e48f8aab5a8a76e6
 
 COCOAPODS: 1.5.3

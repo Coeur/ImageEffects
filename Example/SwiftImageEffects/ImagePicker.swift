@@ -21,18 +21,18 @@ fileprivate extension UIApplication {
 }
 #endif
 
-extension UIImagePickerControllerDelegate where Self : UIViewController, Self : UINavigationControllerDelegate {
+extension UIImagePickerControllerDelegate where Self: UIViewController, Self: UINavigationControllerDelegate {
     /// Prompt the source choice for image picker
     func presentImagePickerActionSheet() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let cameraAction = UIAlertAction(title: "Camera", style: .default) { [weak self] alert in
+            let cameraAction = UIAlertAction(title: "Camera", style: .default) { [weak self] _ in
                 self?.pickImage(sourceType: .camera)
             }
             alertController.addAction(cameraAction)
         }
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            let selectFromAlbumAction = UIAlertAction(title: "Photo album", style: .default) { [weak self] alert in
+            let selectFromAlbumAction = UIAlertAction(title: "Photo album", style: .default) { [weak self] _ in
                 self?.pickImage(sourceType: .photoLibrary)
             }
             alertController.addAction(selectFromAlbumAction)
