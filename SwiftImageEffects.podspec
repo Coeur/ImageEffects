@@ -4,7 +4,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftImageEffects'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Swift implementation of UIImageEffects to apply blur and tint effects to an image.'
   s.description      = <<-DESC
 This class contains methods to apply blur and tint effects to an image.
