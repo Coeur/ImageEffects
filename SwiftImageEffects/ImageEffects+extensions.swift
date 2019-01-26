@@ -31,3 +31,28 @@ extension UIView {
         }
     }
 }
+
+extension UIImage {
+    /// Return a new image cropped to a rectangle.
+    /// - parameter rect:
+    /// The rectangle to crop.
+    open func cropped(to rect: CGRect) -> UIImage {
+        // a UIImage is either initialized using a CGImage, a CIImage, or nothing
+        if let cgImage = self.cgImage {
+            // CGImage.cropping(to:) is magnitudes faster than UIImage.draw(at:)
+            if let cgCroppedImage = cgImage.cropping(to: rect) {
+                return UIImage(cgImage: cgCroppedImage)
+            } else {
+                return UIImage()
+            }
+        }
+        if let ciImage = self.ciImage {
+            // Core Image's coordinate system mismatch with UIKit, so rect needs to be mirrored.
+            var ciRect = rect
+            ciRect.origin.y = ciImage.extent.height - ciRect.origin.y - ciRect.height
+            let ciCroppedImage = ciImage.cropped(to: ciRect)
+            return UIImage(ciImage: ciCroppedImage)
+        }
+        return self
+    }
+}

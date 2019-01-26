@@ -10,21 +10,6 @@ import UIKit
 import AVFoundation
 import Photos
 
-#if swift(>=4.0)
-#else
-// Swift 3 compatibility
-extension AVMediaType {
-    static let video: AVMediaType = AVMediaTypeVideo as AVMediaType
-}
-extension AVCaptureDevice {
-    class func authorizationStatus(for mediaType: AVMediaType) -> AVAuthorizationStatus {
-        return authorizationStatus(forMediaType: mediaType as String?)
-    }
-    class func requestAccess(for mediaType: AVMediaType, completionHandler handler: @escaping (Bool) -> Void) {
-        requestAccess(forMediaType: mediaType as String?, completionHandler: handler)
-    }
-}
-#endif
 #if swift(>=4.2)
 #else
 // Swift 4.0 compatibility
