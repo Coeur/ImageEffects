@@ -338,7 +338,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftImageEffects_Example/Pods-SwiftImageEffects_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftImageEffects_Example/Pods-SwiftImageEffects_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SwiftImageEffects/SwiftImageEffects.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -347,7 +347,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftImageEffects_Example/Pods-SwiftImageEffects_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftImageEffects_Example/Pods-SwiftImageEffects_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		838A9A1B57A35C6ACE13C4E6 /* [CP] Copy Pods Resources */ = {
@@ -356,7 +356,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftImageEffects_Example/Pods-SwiftImageEffects_Example-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftImageEffects_Example/Pods-SwiftImageEffects_Example-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/SwiftImageEffectsSamples/SwiftImageEffectsSamples.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -365,7 +365,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftImageEffects_Example/Pods-SwiftImageEffects_Example-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftImageEffects_Example/Pods-SwiftImageEffects_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
