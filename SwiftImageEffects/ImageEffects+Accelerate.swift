@@ -143,7 +143,7 @@ extension UIImage {
                     inputRadius = 2.0
                 }
                 
-                var radius = UInt32(floor((inputRadius * 3.0 * sqrt(2 * .pi) / 4 + 0.5) / 2) as CGFloat)
+                var radius = UInt32(floor((inputRadius * 3.0 * sqrt(2 * .pi) as CGFloat / 4 + 0.5) / 2) as CGFloat)
                 
                 radius |= 1 // force radius to be odd so that the three box-blur methodology works.
                 
